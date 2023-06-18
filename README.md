@@ -15,26 +15,26 @@ Include the necessary AHK libraries at the beginning of your script:
 #Include getExchange.ahk
 #Include _jxon.ahk
 #Include WinHttpRequest.ahk
-Create an instance of the Exchange class:
 ```
 
 
+Create an instance of the Exchange class:
 ```autohotkey
 Ex := Exchange()
-Get the exchange rate between two currencies:
 ```
 
 
+Get the exchange rate between two currencies:
 ```autohotkey 
 exchangeRate := Ex.getEx("USD", "EUR")
-Display all available country codes:
 ```
 
+Display all available country codes:
 ```autohotkey 
 MsgBox(Ex.getCountryCodes())
-Retrieve exchange rates for all countries using a specific currency as the reference:
 ```
 
+Retrieve exchange rates for all countries using a specific currency as the reference:
 ```autohotkey 
 US := Ex.getAllbyRef("USD")
 MsgBox(US.string) ; Displays every country and their exchange rate
